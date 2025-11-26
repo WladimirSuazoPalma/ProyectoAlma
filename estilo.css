@@ -1,20 +1,68 @@
-
- body {
+ 
+  body {
     font-family: 'Arial', sans-serif;
-    margin: 100;
-    padding: 100;
+    margin: 100px;
+    padding: 100px;
     color: #988e8e;
-    background-image: url('logo.jpg'); 
-    background-color:    rgba(149, 146, 161, 0.7); 
+    background-image: url('logo.jpg');
+    background-color:    rgba(149, 146, 161, 0.9); 
     background-repeat: no-repeat; /* Para que el logo no se repita */
-    background-position: center center; /* Para centrar el logo */
+    background-position: center center; /* Para centrar el logo */ 
     background-size: cover; 
     background-attachment: fixed; 
     
+} 
+
+.titulo{
+        font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+ul{
+    list-style: none;
 }
 
-header {
+h3{
+    color: #020202;
+
+}
+
+a {
+    text-decoration: none;
+    color: #2c1717;
+    font-size: 18px;
+    padding: 25px;
     text-align: center;
+
+}
+
+p{
+    color: #030303;
+
+}
+
+li{
+    display: inline;
+    transition: background ease 1s;
+    
+}
+li:hover{
+    background-color: cadetblue;
+   
+}
+    /* .menu-navegacion ul {
+      display: flex;
+      list-style-type: none;
+      padding-left: 0;
+      margin: 0;
+    }
+    .menu-navegacion ul li {
+      margin-right: 20px;
+    } */
+
+header {
+    text-align:center;
     padding: 20px 10px;
 }
 
@@ -22,7 +70,7 @@ header h1 {
     font-size: 2.8em; 
     margin-bottom: 5px;
     font-weight: bold; 
-    color: #804a4a; 
+    color: #0f0f0f; 
 }
 
 header h2 {
@@ -38,68 +86,12 @@ main {
    
 }
 
-.lista-platos {
-    display: grid;
-    /* Intenta ajustar el minmax para que se parezca a tu diseño */
-    /* Si tenías 3 columnas en pantalla ancha: */
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 25px; /* Espacio entre los platos */
-}
-
-.plato {
-    background-color: transparent; /* Los platos no tenían un fondo distinto al body */
-    border-radius: 10px; /* Bordes redondeados para la imagen */
-    padding: 8px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.plato img {
-    width: 150px; /* Ajusta el tamaño según tus imágenes originales */
-    height: 150px;
-    object-fit: cover; /* Para que la imagen rellene sin deformarse */
-    border-radius: 10px; /* Bordes redondeados para la imagen */
-    margin-bottom: 20px; /* Espacio debajo de la imagen */
-    border: 2px solid #4a3f70; /* Un borde sutil si lo deseas */
-}
-
-.nombre-plato {
-    font-size: 1.3em;
-    font-weight: bold;
-    margin-top: 0;
-    margin-bottom: 8px;
-    color: #f5f5f5;
-}
-
-.precio-plato {
-    font-size: 1.1em;
-    color: #e0e0e0; /* Un poco menos brillante que el nombre */
-    margin-top: 0;
-    margin-bottom: 15px; /* Espacio antes del botón (si lo usas) */
-}
-
-/* Estilo opcional para el botón, si decides mostrarlo visualmente */
-.btn-anadir-qr {
-    background-color: #f0f0f0; /* Color del botón como en tu app */
-    color: #2c234d; /* Texto oscuro para el botón */
-    border: none;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 1em;
-    border-radius: 5px;
-    cursor: default; /* No es clickeable en un menú estático */
-    font-weight: bold;
-}
 
 footer {
     text-align: center;
     padding: 25px 10px;
     margin-top: 30px;
-    color: #a0a0a0; /* Un gris para el texto del footer */
+    color: #000000; 
     font-size: 0.9em;
 }
 

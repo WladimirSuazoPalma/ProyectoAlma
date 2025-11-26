@@ -1,0 +1,89 @@
+<html>
+    <meta charset="UTF-8">
+    <head>
+        <title>
+            registrar
+        </title>
+        <link href="estilos.css" rel="stylesheet"/>
+        <script>
+            function togglePassword() {
+                const passwordInput = document.getElementById("Clave");
+                const type = passwordInput.type === "password" ? "text" : "password";
+                passwordInput.type = type;
+            }
+        </script>
+    </head>
+    <body>
+        <form method="POST" action="Insertar.php">
+            <center>
+                <table>
+                    <tr>
+                        <td>
+                            Ingresar Nombre Completo :
+                        </td>
+                        <td>
+                            <input type="text" name="Nombres" id="Nombres" placeholder="Ingrese Nombre Completo" required/>
+                        </td>
+                    </tr>
+                   
+                    <tr>
+                        <td>
+                            Ingresar Correo:
+                        </td>
+                        <td>
+                            <input type="email" name="Email" id="Email" placeholder="Ingrese Correo" required/>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td>
+                            Ingresar Nombre de Usuario:
+                        </td>
+                        <td>
+                            <input type="text" name="Usuario" id="Usuario" placeholder="Ingrese Usuario" required/>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            Ingresar Clave:
+                        </td>
+                        <td>
+                            <input type="password" name="Clave" id="Clave" placeholder="Ingrese Clave" required/>
+                            <span class="toggle-password" onclick="togglePassword()"></span>
+                        </td>
+                    </tr>
+                                        <table>
+                    <tr>
+                        <td>
+                    <label for="Rol">Rol/Especialidad:</label>
+                    </td>
+                    <td>
+                    <select id="Rol" name="Rol" required>
+                        <option value="">-- Selecciona un Rol --</option>
+                        <option value="1">Administrador</option>
+                        <option value="2">Esteticista</option>
+                        <option value="3">Dermatólogo</option>
+                    </select>
+                    </td>
+                    </tr>
+                    </table>
+                    <tr >
+                        <td>
+                            <input type="submit" value="Ingresar" name="Ingresar" class="boton"/>
+                        </td>
+                        <td>
+                            <input type="reset" value="Borrar" class="boton"/>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <li><a href="Alma.html">Volver </a> </li>
+                        </td>
+                    </tr>
+                </table>
+            </center>
+        </form>
+    </body>
+</html>
