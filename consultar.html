@@ -1,178 +1,67 @@
-<!-- <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html>
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="1894.7">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
-  </style>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <title>Citas Activas</title>
 </head>
 <body>
-<p class="p1">&lt;?php</p>
-<p class="p1">require_once("conexionsql.php");</p>
-<p class="p2"><br></p>
-<p class="p1">$usuarioID = 1;<span class="Apple-converted-space"> </span></p>
-<p class="p2"><br></p>
-<p class="p1">$conn = conectar();</p>
-<p class="p2"><br></p>
-<p class="p1">if ($conn === false) {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>echo '&lt;tr&gt;&lt;td colspan="6" style="text-align:center; color:red;"&gt;Fallo: No se pudo establecer la conexión a la base de datos.&lt;/td&gt;&lt;/tr&gt;';</p>
-<p class="p1"><span class="Apple-converted-space">    </span>exit();</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">$params = array(</p>
-<p class="p1"><span class="Apple-converted-space">    </span>array($usuarioID, SQLSRV_PARAM_IN)</p>
-<p class="p1">);</p>
-<p class="p2"><br></p>
-<p class="p1">$stmt = sqlsrv_query($conn, '{CALL CONSULTARCITASACTIVAS(?)}', $params);</p>
-<p class="p2"><br></p>
-<p class="p1">if ($stmt === false) {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>echo '&lt;tr&gt;&lt;td colspan="6" style="text-align:center; color:red;"&gt;Error al ejecutar el procedimiento de consulta.&lt;/td&gt;&lt;/tr&gt;';</p>
-<p class="p1">} else {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>if (sqlsrv_has_rows($stmt)) {</p>
-<p class="p2"><span class="Apple-converted-space">        </span></p>
-<p class="p1"><span class="Apple-converted-space">        </span>while ($row = sqlsrv_fetch_array($stmt, SQLSRV_FETCH_ASSOC)) {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>$fecha = $row['FechaCita']-&gt;format('Y-m-d');</p>
-<p class="p1"><span class="Apple-converted-space">            </span>$hora = $row['HoraCita']-&gt;format('H:i');<span class="Apple-converted-space"> </span></p>
-<p class="p2"><span class="Apple-converted-space">            </span></p>
-<p class="p1"><span class="Apple-converted-space">            </span>echo '&lt;tr&gt;';</p>
-<p class="p1"><span class="Apple-converted-space">            </span>echo '&lt;td&gt;' . htmlspecialchars($row['CitaID']) . '&lt;/td&gt;';</p>
-<p class="p1"><span class="Apple-converted-space">            </span>echo '&lt;td&gt;' . htmlspecialchars($fecha) . '&lt;/td&gt;';</p>
-<p class="p1"><span class="Apple-converted-space">            </span>echo '&lt;td&gt;' . htmlspecialchars($hora) . '&lt;/td&gt;';</p>
-<p class="p1"><span class="Apple-converted-space">            </span>echo '&lt;td&gt;' . htmlspecialchars($row['NombreServicio']) . '&lt;/td&gt;';<span class="Apple-converted-space"> </span></p>
-<p class="p1"><span class="Apple-converted-space">            </span>echo '&lt;td&gt;' . htmlspecialchars($row['Estado']) . '&lt;/td&gt;';</p>
-<p class="p1"><span class="Apple-converted-space">            </span>echo '&lt;td&gt;';</p>
-<p class="p2"><span class="Apple-converted-space">            </span></p>
-<p class="p1"><span class="Apple-converted-space">            </span>if ($row['Estado'] === 'Pendiente' || $row['Estado'] === 'Confirmada') {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>echo '&lt;button class="boton-accion boton-cancelar" data-cita-id="' . htmlspecialchars($row['CitaID']) . '"&gt;Cancelar&lt;/button&gt;';</p>
-<p class="p1"><span class="Apple-converted-space">            </span>} else {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>echo 'N/A';</p>
-<p class="p1"><span class="Apple-converted-space">            </span>}</p>
-<p class="p2"><span class="Apple-converted-space">            </span></p>
-<p class="p1"><span class="Apple-converted-space">            </span>echo '&lt;/td&gt;';</p>
-<p class="p1"><span class="Apple-converted-space">            </span>echo '&lt;/tr&gt;';</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>} else {</p>
-<p class="p1"><span class="Apple-converted-space">        </span>echo '&lt;tr&gt;&lt;td colspan="6" style="text-align:center;"&gt;No tienes citas activas pendientes.&lt;/td&gt;&lt;/tr&gt;';</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">if (isset($stmt)) {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>sqlsrv_free_stmt($stmt);</p>
-<p class="p1">}</p>
-<p class="p1">sqlsrv_close($conn);<span class="Apple-converted-space"> </span></p>
-<p class="p1">?&gt;</p>
-</body>
-</html> -->
-
 <?php
 
 require_once("conexionsql.php");
 
-
-
 $usuarioID = 1; 
-
-
 
 $conn = conectar();
 
-
-
 if ($conn === false) {
-
     echo '<tr><td colspan="6" style="text-align:center; color:red;">Fallo: No se pudo establecer la conexión a la base de datos.</td></tr>';
-
     exit();
-
 }
 
-
-
 $params = array(
-
     array($usuarioID, SQLSRV_PARAM_IN)
-
 );
-
-
 
 $stmt = sqlsrv_query($conn, '{CALL CONSULTARCITASACTIVAS(?)}', $params);
 
-
-
 if ($stmt === false) {
-
     echo '<tr><td colspan="6" style="text-align:center; color:red;">Error al ejecutar el procedimiento de consulta.</td></tr>';
-
 } else {
-
     if (sqlsrv_has_rows($stmt)) {
-
         
-
         while ($row = sqlsrv_fetch_array($stmt, SQLSRV_FETCH_ASSOC)) {
-
+            // Asegúrate de que $row['FechaCita'] y $row['HoraCita'] sean objetos DateTime válidos
             $fecha = $row['FechaCita']->format('Y-m-d');
-
             $hora = $row['HoraCita']->format('H:i'); 
-
             
-
             echo '<tr>';
-
             echo '<td>' . htmlspecialchars($row['CitaID']) . '</td>';
-
             echo '<td>' . htmlspecialchars($fecha) . '</td>';
-
             echo '<td>' . htmlspecialchars($hora) . '</td>';
-
             echo '<td>' . htmlspecialchars($row['NombreServicio']) . '</td>'; 
-
             echo '<td>' . htmlspecialchars($row['Estado']) . '</td>';
-
             echo '<td>';
-
             
-
             if ($row['Estado'] === 'Pendiente' || $row['Estado'] === 'Confirmada') {
-
                 echo '<button class="boton-accion boton-cancelar" data-cita-id="' . htmlspecialchars($row['CitaID']) . '">Cancelar</button>';
-
             } else {
-
                 echo 'N/A';
-
             }
-
             
-
             echo '</td>';
-
             echo '</tr>';
-
         }
-
     } else {
-
         echo '<tr><td colspan="6" style="text-align:center;">No tienes citas activas pendientes.</td></tr>';
-
     }
-
 }
-
 
 
 if (isset($stmt)) {
-
     sqlsrv_free_stmt($stmt);
-
 }
-
 sqlsrv_close($conn); 
-
 ?>
+</body>
+</html>
