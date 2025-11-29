@@ -3,25 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiénes Somos - Alma DermoEstetica</title> <!-- Título específico -->
-    <link rel="stylesheet" href="estilo.css"> <!-- Mismo CSS -->
+    <title>Quiénes Somos - Alma DermoEstetica</title> 
+    <link rel="stylesheet" href="estilo.css"> 
 </head>
 <body>
     <header>
-        <h1>Alma DermoEstetica</h1>
         <nav>
             <ul>
                 <li><a href="Alma.html">Inicio</a></li>
                 <li><a href="contacto.html">Contacto</a></li>
-                <li><a href="quienes-somos.html" class="active">Quiénes Somos</a></li> <!-- 'active' para esta página -->
-                <li><a href="vision.html">Visión</a></li>
+                <li><a href="quienes-somos.html" class="active">Quiénes Somos</a></li> 
+                <li><a href="registrar.html">Ingresar</a></li>
+                
             </ul>
         </nav>
     </header>
 
     <main>
         <section class="contenido-pagina">
-            <h2>Conoce al Equipo de Alma DermoEstetica</h2>
+            <h3>Conoce al Equipo de Alma DermoEstetica</h3>
 
             <p>
                 En Alma DermoEstetica, somos un equipo apasionado y dedicado de profesionales
@@ -31,19 +31,18 @@
                 promueven una sensación de renovación y confianza.
             </p>
 
-            <h3>Nuestra Filosofía</h3>
-            <p>
+            <!-- <h3>Nuestra Filosofía</h3> -->
+            <!-- <p>
                 Nuestra filosofía se centra en la atención personalizada y en el uso de
                 productos de la más alta calidad, combinados con las últimas tecnologías
                 en dermoestética. Cada cliente es único, y por ello, dedicamos el tiempo
                 necesario para entender tus necesidades y objetivos específicos, diseñando
                 un plan de tratamiento a tu medida.
-            </p>
+            </p> -->
 
             <h3>El Equipo</h3>
-            <!-- Puedes añadir secciones para cada miembro del equipo si lo deseas -->
             <div class="miembro-equipo">
-                <h4> Tecnologo Medico Maria Paz Valenzuela - Fundadora y Especialista en Dermoestetica Principal</h4>
+                <h3> Tecnologo Medico Maria Paz Valenzuela - Fundadora y Especialista en Dermoestetica Principal</h3>
                 <p>
                     Con más de 5 años de experiencia en el campo de la dermoestética, la Especialista Valenzuela
                     es una experta reconocida por su enfoque meticuloso y su habilidad para lograr
@@ -70,14 +69,16 @@
         </section>
     </main>
 
+
+
+
+</body>
     <footer>
         <p>© <span id="currentYear"></span> Alma DermoEstetica - Todos los derechos reservados.</p>
     </footer>
-
-    <script>
+        <script>
         if (document.getElementById('currentYear')) {
             document.getElementById('currentYear').textContent = new Date().getFullYear();
         }
     </script>
-</body>
 </html>
