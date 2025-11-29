@@ -1,17 +1,17 @@
 <?php
 require_once("conexionsql.php");
 
-$conn = conectar();
+// Nota: Eliminé la línea "$conn = conectar();" que tenías aquí arriba suelta 
+// porque ya la estás llamando correctamente abajo dentro del IF.
+
 function Insertar($conn)
 {
-
-    $Nombre=$_POST['Nombre'];
-    $Apellidos=$_POST['Apellidos'];
-    $Correo=$_POST['Email'];
-    $ClaveCruda = $_POST["Clave"]; 
-    $Clave      = password_hash($ClaveCruda, PASSWORD_DEFAULT);
-    $Rol=$_POST['Rol'];
-
+    // Recogida de datos
+    $Nombre    = $_POST['Nombre'];
+    $Apellidos = $_POST['Apellidos'];
+    $Correo    = $_POST['Email'];
+    $Clave     = $_POST["Clave"];
+    $Rol       = $_POST['Rol'];
 
     $Params = array(
         array($Nombre, SQLSRV_PARAM_IN),
@@ -19,15 +19,21 @@ function Insertar($conn)
         array($Correo, SQLSRV_PARAM_IN),  
         array($Clave, SQLSRV_PARAM_IN),
         array($Rol, SQLSRV_PARAM_IN),
-
     );
-    $stmt = sqlsrv_query($conn, '{CALL CREARCUENTA(?,?,?,?,?)}', $Params);
+
+    // Ejecución del Procedimiento
+    $sql = "{CALL CREARCUENTA(?,?,?,?,?)}";
+    $stmt = sqlsrv_query($conn, $sql, $Params);
+
+    // Verificación
     if ($stmt === false) {
         echo "Error al ejecutar el procedimiento. \n";
         die(print_r(sqlsrv_errors(), true));
     }
-    else{
-        //EL popup bonito
+    else {
+        // --- AQUÍ EMPIEZA LA MAGIA DE SWEETALERT ---
+        
+        // Imprimimos una estructura HTML básica para que el navegador sepa interpretar la librería
         echo '
         <!DOCTYPE html>
         <html lang="es">
@@ -52,25 +58,24 @@ function Insertar($conn)
                 }).then((result) => {
                     // 3. Cuando el usuario presiona el botón...
                     if (result.isConfirmed) {
-                        window.location.href = "login.html";
+                        window.location.href = "login.php";
                     }
                 });
             </script>
         </body>
         </html>';
+        // --- FIN DEL BLOQUE SWEETALERT ---
     }
 }
 
+// Bloque principal de ejecución
 if (isset($_POST["Ingresar"])) 
 {
     $conn = conectar();
     if($conn)
     {
         Insertar($conn);
-        sqlsrv_close( $conn );
+        sqlsrv_close($conn);
     }
 }
-
-
-    
 ?>

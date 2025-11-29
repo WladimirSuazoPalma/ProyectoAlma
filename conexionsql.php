@@ -1,8 +1,12 @@
 <?php
 function conectar()
 {
-$Server= "WLADIMIR\SQLEXPRESS";
-$connectionInfo= array("Database"=>"Proyecto_Alma",);
+$Server= "ALAN";
+$connectionInfo = array(
+    "Database" => "Proyecto_Alma", 
+    "UID" => "admin",        
+    "PWD" => "pass1234"        
+);
 $conn = sqlsrv_connect( $Server, $connectionInfo );
 if( $conn === false)
     {
