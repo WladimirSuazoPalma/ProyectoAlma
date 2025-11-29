@@ -2,16 +2,42 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 100px;
     padding: 100px;
+    margin: 100px;
+    padding: 100px;
     color: #988e8e;
     background-image: url('logo.jpg');
     background-color:    rgba(149, 146, 161, 0.9); 
+    background-image: url('logo.jpg');
+    background-color:    rgba(149, 146, 161, 0.9); 
     background-repeat: no-repeat; /* Para que el logo no se repita */
+    background-position: center center; /* Para centrar el logo */ 
     background-position: center center; /* Para centrar el logo */ 
     background-size: cover; 
     background-attachment: fixed; 
     
 } 
 
+
+.titulo{
+        font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+ul{
+    list-style: none;
+}
+
+h3{
+    color: #020202;
+
+}
+
+a {
+    text-decoration: none;
+    color: #2c1717;
+    font-size: 18px;
+    padding: 25px;
 .titulo{
         font-family: 'Courier New', Courier, monospace;
     font-size: 20px;
@@ -69,6 +95,7 @@ header h1 {
     margin-bottom: 5px;
     font-weight: bold; 
     color: #0f0f0f; 
+    color: #0f0f0f; 
 }
 
 header h2 {
@@ -88,6 +115,7 @@ footer {
     text-align: center;
     padding: 25px 10px;
     margin-top: 30px;
+    color: #000000; 
     color: #000000; 
     font-size: 0.9em;
 }
