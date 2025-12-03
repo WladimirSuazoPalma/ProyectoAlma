@@ -1,16 +1,19 @@
 body {
-    font-family: 'Arial', sans-serif;
-    margin: 100px; 
-    padding: 100px;
-    color: #988e8e;
-
-    background-image: url('logo.jpg');
-    background-color: rgba(149, 146, 161, 0.9); 
+    font-family: 'Segoe UI', sans-serif;
+    margin:0;
+    min-height: 100vh;      
+    display: flex;       
+    flex-direction: column; 
+    background-image: 
+        linear-gradient(rgba(94, 28, 38, 0.05), rgba(94, 28, 38, 0.05)),
+        url('img/logo.jpg'); 
+        
     background-repeat: no-repeat;
     background-position: center center;
-    background-size: cover; 
-    background-attachment: fixed; 
-} 
+    background-size: cover;
+    background-attachment: fixed;
+}
+
 
 .titulo {
     font-family: 'Courier New', Courier, monospace;
@@ -48,7 +51,7 @@ li:hover {
     background-color: cadetblue;
 }
 
-/* Header General */
+
 header {
     text-align: center;
     padding: 20px 10px;
@@ -108,7 +111,7 @@ footer p {
 body.fondo-login {
     margin: 0;
     padding: 0;
-    background-image: url('logo.jpg'); 
+    background-image: url('img/Rocas.png'); 
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -172,9 +175,13 @@ body.fondo-login {
 .login-card .btn-ingresar {
     background-color: #5e1c26; 
     color: white;
+    display: flex;
+    align-items: center;
 }
 .login-card .btn-ingresar:hover {
     background-color: #7a2432; 
+    display: flex;
+    align-items: center;
 }
 
 .login-card .btn-borrar {
