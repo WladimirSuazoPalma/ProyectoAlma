@@ -270,5 +270,46 @@ reg{
     border-top: 1px solid rgba(255,255,255,0.1);
 }
 .barra-copyright p {
-    margin: 0; /* Elimina el margen por defecto del párrafo */
+    margin: 0; 
+}
+
+.contenedor-dashboard {
+    width: 95%;
+    max-width: 1200px;
+    margin: 40px auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+}
+body.fondo-dashboard {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f4f4f4; 
+    background-image: none;    
+    margin: 0;                 
+    padding: 0;
+    display: block;            
+}
+
+.tabla-citas {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    font-size: 15px;
+}
+
+.tabla-citas thead tr {
+    background-color: #5e1c26; 
+    color: white;
+    text-align: left;
+}
+
+.tabla-citas th, .tabla-citas td {
+    padding: 15px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+
+.tabla-citas tbody tr:hover {
+    background-color: #f9e6e8;
 }
