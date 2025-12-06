@@ -12,7 +12,7 @@ $conn=conectar();
     {
         $params = array(
             array($Usuario, SQLSRV_PARAM_IN),
-            array($Clave, SQLSRV_PARAM_OUT)
+            array($Clave, SQLSRV_PARAM_IN)
         );
         $stmt = sqlsrv_query($conn, '{call AUTENTIFICACION(?,?)}', $params);
     }
@@ -21,17 +21,28 @@ $conn=conectar();
             
             $_SESSION['usuario_id'] = $row['UsuarioID'];
             $_SESSION['usuario_nombre'] = $row['Nombre'];
+            $_SESSION['usuario_email'] = $row['Email']; 
+            $_SESSION['es_admin'] = $row['EsAdmin'];
+
             
             sqlsrv_free_stmt($stmt);
             sqlsrv_close($conn);
             
-            header("Location: inicio.php");
+            if($row['EsAdmin'] == 1 || $row['EsAdmin']  == true)
+                {
+                    header('Location: admin.php');
+                }
+                else {
+                    header('Location: Insertar.php');
+                }
             exit();
         } else {
             $error = "Usuario o contraseña incorrectos";
         }
         
-        if(isset($stmt)) sqlsrv_free_stmt($stmt);
+        if($stmt){
+             sqlsrv_free_stmt($stmt);
+        }
         sqlsrv_close($conn);
     }
 
@@ -82,6 +93,14 @@ $conn=conectar();
                             <input type="reset" value="Borrar" class="boton"/>
                         </td>
                     </tr>
+
+                                        <tr>
+                        <td>
+                            <li><a href="Alma.html" class="boton-volver">Volver </a> </li>
+                        </td>
+                    </tr>
+
+
                 </table>
             </center>
         </form>
