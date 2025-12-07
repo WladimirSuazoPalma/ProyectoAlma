@@ -1,46 +1,64 @@
- 
-  body {
-    font-family: 'Arial', sans-serif;
-    margin: 100px;
-    padding: 100px;
-    color: #FFFFFF;
-    background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)),
-    url('logo.jpg');
-    background-color:    rgba(149, 146, 161, 0.9); 
-    background-repeat: no-repeat; /* Para que el logo no se repita */
-    background-position: center center; /* Para centrar el logo */ 
-    background-size: cover; 
-    background-attachment: fixed; 
-    
-} 
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin:0;
+    min-height: 100vh;      
+    display: flex;       
+    flex-direction: column; 
+    background-image: 
+        linear-gradient(rgba(94, 28, 38, 0.05), rgba(94, 28, 38, 0.05)),
+        url('img/logo.png'); 
+        
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+}
 
-.titulo{
-        font-family: 'Courier New', Courier, monospace;
+
+.titulo {
+    font-family: 'Courier New', Courier, monospace;
     font-size: 20px;
     text-align: center;
     font-weight: bold;
 }
-ul{
+
+ul {
     list-style: none;
 }
 
-
-h3{
-    color: #ccc9c9;
-
+h3 {
+    color: #020202;
 }
 
 a {
     text-decoration: none;
-    color: #ffd9d9;
+    color: #2c1717;
     font-size: 18px;
     padding: 25px;
+    text-align: center;
+}
+
+p {
+    color: #dcd6d6;
+}
+
+li {
+    display: inline;
+    transition: background ease 1s;
+}
+
+li:hover {
+    background-color: cadetblue;
+}
+
+
+header {
     text-align: center;
 
 }
 
 p{
-    color: #cbcaca;
+    color: #000000;
 
 }
 
@@ -49,10 +67,10 @@ li{
     transition: background ease 1s;
     
 }
-li:hover{
+/* li:hover{
     background-color: rgb(19, 21, 21);
    
-}
+} */
     /* .menu-navegacion ul {
       display: flex;
       list-style-type: none;
@@ -68,6 +86,11 @@ header {
     padding: 20px 10px;
 }
 
+header p {
+        color: #0f0f0f; 
+
+}
+
 header h1 {
     font-size: 2.8em; 
     margin-bottom: 5px;
@@ -76,26 +99,16 @@ header h1 {
 }
 
 header h2 {
-    font-size: 1.8em; /* Más pequeño para "Nuestro Menú" */
+    font-size: 1.8em; 
     margin-top: 0;
     font-weight: normal;
-    color: #d0d0d0; /* Un gris claro */
+    color: #000000; 
 }
 
 main {
     padding: 20px;
-    background-color:  rgba(44, 35, 77, 0.4);/* rgba(0, 0, 0, 0.3); */
-   
-}
-
-.boton-volver {
-    margin-top: 20px;
-    display: block;
-    color: #c65656;
-}
-
-
-footer {
+    background-color: rgba(44, 35, 77, 0.4);
+}footer {
     text-align: center;
     padding: 25px 10px;
     margin-top: 30px;
@@ -107,40 +120,207 @@ footer p {
     margin: 5px 0;
 }
 
-/* Ajustes para pantallas más pequeñas */
+
 @media (max-width: 768px) {
-    header h1 {
-        font-size: 2.2em;
-    }
-    header h2 {
-        font-size: 1.5em;
-    }
+    header h1 { font-size: 2.2em; }
+    header h2 { font-size: 1.5em; }
     .lista-platos {
         grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
         gap: 20px;
     }
-    .plato img {
-        width: 120px;
-        height: 120px;
-    }
-    .nombre-plato {
-        font-size: 1.1em;
-    }
-    .precio-plato {
-        font-size: 1em;
-    }
+    .plato img { width: 120px; height: 120px; }
+    .nombre-plato { font-size: 1.1em; }
+    .precio-plato { font-size: 1em; }
 }
 
 @media (max-width: 480px) {
-    .lista-platos {
-        /* En pantallas muy pequeñas, podrías querer 1 o 2 columnas */
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-        /* O si quieres forzar 2 columnas: */
-        /* grid-template-columns: 1fr 1fr; */
-    }
-     .plato img {
-        width: 100px;
-        height: 100px;
-    }
+    .lista-platos { grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); }
+    .plato img { width: 100px; height: 100px; }
 }
-  
+
+
+
+body.fondo-login {
+    margin: 0;
+    padding: 0;
+    background-image: url('img/Rocas.png'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+}
+
+.login-card {
+    background-color: rgba(255, 255, 255, 0.90); 
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    width: 100%;
+    max-width: 350px;
+    text-align: center;
+    border: 1px solid #d4af37; 
+}
+
+.login-card h2 {
+    color: #5e1c26; 
+    font-family: 'Georgia', serif;
+    margin-bottom: 30px;
+}
+
+.login-card .input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.login-card .input-group label {
+    display: block;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.login-card .input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; 
+}
+
+.login-card .input-group input:focus {
+    border-color: #d4af37; 
+    outline: none;
+}
+
+.login-card .btn {
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    transition: 0.3s;
+}
+
+.login-card .btn-ingresar {
+    background-color: #5e1c26; 
+    color: white;
+    display: flex;
+    align-items: center;
+}
+.login-card .btn-ingresar:hover {
+    background-color: #7a2432; 
+    display: flex;
+    align-items: center;
+}
+
+.login-card .btn-borrar {
+    background-color: transparent;
+    border: 1px solid #5e1c26;
+    color: #5e1c26;
+    margin-left: 5px; 
+}
+
+
+
+
+body.fondo-dashboard {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f4f4f4; 
+    background-image: none;    
+    margin: 0;                 
+    padding: 0;
+    display: block;            
+}
+
+.contenedor-dashboard {
+    width: 95%;
+    max-width: 1200px;
+    margin: 40px auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+}
+
+
+.contenedor-dashboard h1 {
+    color: #5e1c26; 
+    text-align: center;
+    font-family: 'Georgia', serif;
+    margin-bottom: 30px;
+}
+
+
+.tabla-citas {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    font-size: 15px;
+}
+
+.tabla-citas thead tr {
+    background-color: #5e1c26; 
+    color: white;
+    text-align: left;
+}
+
+.tabla-citas th, .tabla-citas td {
+    padding: 15px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+
+.tabla-citas tbody tr:hover {
+    background-color: #f9e6e8;
+}
+
+
+.badge {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+.badge-pendiente {
+    background-color: #fff3cd;
+    color: #856404;
+    border: 1px solid #ffeeba;
+}
+.badge-confirmada {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+
+.btn-volver {
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #5e1c26;
+    font-weight: bold;
+    border: 1px solid #5e1c26;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+.btn-volver:hover {
+    background-color: #5e1c26;
+    color: white;
+}
+
+
+.pagina-limpieza * {
+    color: #000000 !important;
+}
+
+.pagina-limpieza h1,
+.pagina-limpieza h2,
+.pagina-limpieza h3 {
+    color: #000000 !important;
+}
+

@@ -1,0 +1,292 @@
+body{
+    font-family: 'Segoe UI', sans-serif;
+    margin:0;
+    
+    min-height: 100vh;      /* Obliga al cuerpo a medir al menos el 100% de la pantalla */
+    display: flex;          /* Convierte el cuerpo en una caja flexible */
+    flex-direction: column; /* Ordena los elementos (header, main, footer) verticalmente */
+
+
+    background-image: 
+        linear-gradient(rgba(94, 28, 38, 0.05), rgba(94, 28, 38, 0.05)),
+        url('img/Rocas.png'); 
+        
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+a{
+    text-decoration: none;
+    color:black;
+
+}
+
+header{
+    display: flex;
+    min-height: 70px;
+    background: linear-gradient(to right,#ffffff 0%, #fceceb 100%);
+    border-bottom: 2px solid #d4af37;
+    justify-content: space-between;
+    align-items: center;
+    padding:  10px;
+}
+.logo{
+    display:flex;
+    align-items: center;
+}
+.logo img{
+    height: 100px;
+    margin-right: 10px;
+}
+nav a{
+    font-weight: 600;
+    padding-right: 10px;
+
+}
+nav a:hover{
+    color:rgb(24, 109, 165);
+}
+@media (max-width:700px){
+    header{
+        flex-direction: column;
+    }
+    nav{
+        padding:10px 0px;
+    }
+}
+reg{
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+
+
+.fotos-miniatura {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center; 
+    gap: 10px; 
+}
+
+.servicios-destacados {
+    padding: 60px 0;
+    background-color: rgba(255, 255, 255, 0.85); 
+}
+
+.contenedor-servicios {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+.titulo-seccion {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.titulo-seccion h2 {
+    color: #5e1c26; 
+    font-family: 'Georgia', serif;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.titulo-seccion p {
+    color: #888;
+    font-size: 1.1em;
+}
+
+
+.grid-tarjetas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsivo automático */
+    gap: 30px; 
+}
+
+
+.tarjeta {
+    background-color: white;
+    border-radius: 15px;
+    overflow: hidden; 
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #f0f0f0;
+}
+
+.tarjeta:hover {
+    transform: translateY(-10px); 
+    box-shadow: 0 15px 30px rgba(94, 28, 38, 0.15); 
+}
+
+
+.imagen-tarjeta {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+
+}
+
+
+.contenido-tarjeta {
+    padding: 25px;
+    text-align: center;
+}
+
+.contenido-tarjeta h3 {
+    color: #5e1c26;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.4em;
+}
+
+.contenido-tarjeta p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    font-size: 0.95em;
+}
+
+
+.btn-ver-mas {
+    display: inline-block;
+    text-decoration: none;
+    color: #d4af37; 
+    font-weight: bold;
+    border: 1px solid #d4af37;
+    padding: 8px 20px;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+.btn-ver-mas:hover {
+    background-color: #d4af37;
+    color: white;
+}
+
+
+
+.slider-frame{
+    width:500px;
+    height: 200px;
+    margin:  50px auto 0;
+    overflow: hidden;
+
+    
+}
+.slider-frame ul{
+    display: flex;
+    padding:0;
+    width: 400%;
+
+    animation: slide 8s infinite  alternate ease-in-out;
+
+}
+.slider-frame li{
+    list-style: none;
+    width:100%;
+
+}
+.slider-frame img {
+    width: 100%; /* Ajusta la imagen al ancho completo del slider */
+    height: 200px;
+    border-radius: 15px;
+}
+
+@keyframes slide{
+    0% {margin-left:0%;}
+    20% {margin-left:0%;}
+
+    25% {margin-left:-100%;}
+    45% {margin-left:-100%;}
+
+    50% {margin-left:-200%;}
+    70% {margin-left:-200%;}
+
+    75% {margin-left:-300%;}
+    95% {margin-left:-300%;}
+
+
+}
+
+
+
+.footer-alma {
+    margin-top:auto;
+    background-color: #5e1c26; 
+    color: #fceceb; 
+    font-size: 15px;
+}
+
+.contenedor-footer {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    padding-bottom: 40px;
+}
+
+
+.columna-footer h3 {
+    color: #d4af37; 
+    font-family: 'Georgia', serif;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #d4af37; 
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.columna-footer p {
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+
+.lista-footer {
+    list-style: none;
+    padding: 0;
+}
+
+.lista-footer li {
+    margin-bottom: 10px;
+}
+
+.lista-footer a {
+    color: #fceceb;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.lista-footer a:hover {
+    color: #d4af37; 
+    padding-left: 5px; 
+}
+
+
+.barra-copyright {
+    background-color: #420f19; 
+    text-align: center;
+    padding: 20px 0;
+    font-size: 13px;
+    color: #aaa;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+.barra-copyright p {
+    margin: 0; /* Elimina el margen por defecto del párrafo */
+}
+
+.info-servicio p {
+    font-weight: 600; 
+}
+
+    
+.lista-beneficios li {
+    font-size: 1.1em; 
+    font-weight: 600; 
+    margin-bottom: 10px; 
+    color: rgb(0, 0, 0); 
+}

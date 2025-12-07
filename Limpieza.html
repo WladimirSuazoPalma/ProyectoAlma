@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Limpieza Facial - Alma DermoEstética</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <div class="pagina-limpieza">
+    <center>
+    <header>
+
+        <h1> Limpieza Facial Profunda</h1>
+        <p>Renueva tu piel con nuestro tratamiento profesional</p>
+    </header>
+
+    <main>
+        <div class="detalle-servicio">
+            
+            <div class="galeria-fotos">
+                <div class="foto-principal">
+                    <img src="limpieza.png" alt="" id="fotoPrincipal">
+                </div>
+                <div class="fotos-miniatura">
+                    <img src="img/limpieza.png" alt="Foto 1" onclick="cambiarFoto(this.src)">
+                    <img src="img/Limpieza2.png" alt="Foto 2" onclick="cambiarFoto(this.src)">
+                    <img src="img/Limpieza3.png" alt="Foto 3" onclick="cambiarFoto(this.src)">
+                </div>
+            </div>
+
+            <div class="info-servicio">
+                <h2>¿Qué es la Limpieza Facial?</h2>
+                <p>La limpieza facial profunda es un tratamiento dermatológico profesional que elimina 
+                    impurezas, células muertas, puntos negros y exceso de grasa acumulada en los poros. 
+                    Es el primer paso esencial para mantener una piel sana, radiante y libre de imperfecciones.</p>
+
+                <h3> Beneficios del Tratamiento</h3>
+                <ul class="lista-beneficios">
+                    <li>✓ Elimina puntos negros y espinillas</li>
+                    <li>✓ Desobstruye los poros profundamente</li>
+                    <li>✓ Remueve células muertas</li>
+                    <li>✓ Mejora la textura de la piel</li>
+                    <li>✓ Aumenta la luminosidad natural</li>
+                    <li>✓ Prepara la piel para otros tratamientos</li>
+                    <li>✓ Reduce la aparición de acné</li>
+                    <li>✓ Promueve la regeneración celular</li>
+                </ul>
+
+                <h3> ¿Cómo funciona?</h3>
+                <div class="pasos-tratamiento">
+                    <div class="paso">
+                        <span class="numero"></span>
+                        <h4>Desmaquillado y Limpieza</h4>
+                        <p>Removemos todo tipo de maquillaje e impurezas superficiales.</p>
+                    </div>
+                    <div class="paso">
+                        <span class="numero"></span>
+                        <h4>Exfoliación</h4>
+                        <p>Eliminamos células muertas preparando la piel para el tratamiento.</p>
+                    </div>
+                    <div class="paso">
+                        <span class="numero"></span>
+                        <h4>Vapor y Extracción</h4>
+                        <p>Abrimos los poros con vapor y extraemos puntos negros de forma profesional.</p>
+                    </div>
+                    <div class="paso">
+                        <span class="numero"></span>
+                        <h4>Mascarilla</h4>
+                        <p>Aplicamos mascarilla personalizada según tu tipo de piel.</p>
+                    </div>
+                    <div class="paso">
+                        <span class="numero"></span>
+                        <h4>Hidratación</h4>
+                        <p>Finalizamos con hidratación profunda y protección solar.</p>
+                    </div>
+                </div>
+
+                <h3> Detalles del Servicio</h3>
+                <div class="detalles-box">
+                    <div class="detalle-item">
+                        <strong>⏱ Duración:</strong> 60 minutos
+                    </div>
+                    <div class="detalle-item">
+                        <strong> Precio:</strong> $45.000
+                    </div>
+                    <div class="detalle-item">
+                        <strong> Frecuencia recomendada:</strong> Cada 30 días
+                    </div>
+                    <div class="detalle-item">
+                        <strong> Para quién:</strong> Todo tipo de piel
+                    </div>
+                </div>
+
+                <h3> Recomendaciones</h3>
+                <div class="recomendaciones">
+                    <p><strong>Antes del tratamiento:</strong></p>
+                    <ul>
+                        <li>No usar productos exfoliantes 48 horas antes</li>
+                        <li>Evitar exposición solar intensa</li>
+                        <li>Llegar sin maquillaje de preferencia</li>
+                    </ul>
+                    <p><strong>Después del tratamiento:</strong></p>
+                    <ul>
+                        <li>Usar protector solar diariamente</li>
+                        <li>Evitar maquillaje pesado por 24 horas</li>
+                        <li>No tocar la cara con las manos</li>
+                        <li>Mantener hidratación constante</li>
+                    </ul>
+                </div>
+
+                <div class="botones-accion">
+                    <a href="Alma.html" class="btn-volver">← Volver al Inicio</a>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Alma DermoEstética - Todos los derechos reservados</p>
+    </footer>
+
+    <script>
+        function cambiarFoto(src) {
+            document.getElementById('fotoPrincipal').src = src;
+        }
+    </script>
+    </center>
+    </div>
+</body>
+</html>
