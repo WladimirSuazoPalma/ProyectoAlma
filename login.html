@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>Login - Alma Dermoestética</title>
+    <link href="estilo.css" rel="stylesheet"/>
+</head>
+
+<body class="fondo-login">
+
+    <div class="login-card">
+        <h2>Bienvenido a Alma</h2>
+
+        <form method="POST" action="login.php">
+            
+            <div class="input-group">
+                <label for="Usuario">Usuario:</label>
+                <input type="text" name="Usuario" id="Usuario" placeholder="Ingrese su Correo" required/>
+            </div>
+
+            <div class="input-group">
+                <label for="Clave">Contraseña:</label>
+                <input type="password" name="Clave" id="Clave" placeholder="Ingrese la contraseña" required/>
+            </div>
+
+            <div class="btn-container">
+                <input type="submit" value="Ingresar" class="btn btn-ingresar"/>
+            </div>
+            <br>
+            <div clas="reg">
+                ¿No tienes cuenta? <a href="registrar.html">Registarse</a>
+            </div>
+            <br>
+            <div class="footer-link">
+                <a href="Alma.html">Volver al inicio</a>
+            </div>
+
+        </form>
+    </div>
+
+</body>
+</html>
