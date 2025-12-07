@@ -1,51 +1,61 @@
 <?php
 session_start();
-if(isset($_POST['Ingresar']))
-{
-include("conexionsql.php");
-$Usuario=$_POST["Usuario"];
-$Clave=$_POST["Clave"];
 
-$conn=conectar();
+require_once("conexionsql.php");
 
-    if($conn !== false)
-    {
-        $params = array(
-            array($Usuario, SQLSRV_PARAM_IN),
-            array($Clave, SQLSRV_PARAM_IN)
-        );
-        $stmt = sqlsrv_query($conn, '{call AUTENTIFICACION(?,?)}', $params);
+if (isset($_POST['Usuario']) && isset($_POST['Clave'])) {
+    
+    $conn = conectar();
+    
+    $user = $_POST['Usuario']; 
+    $pass = $_POST['Clave']; 
+
+
+    $sql = "{CALL OBTENERUSUARIO(?)}";
+    $params = array($user);
+    
+    $stmt = sqlsrv_query($conn, $sql, $params);
+
+    if ($stmt === false) {
+        die(print_r(sqlsrv_errors(), true));
     }
-            if ($stmt !== false && sqlsrv_has_rows($stmt)) {
-            $row = sqlsrv_fetch_array($stmt, SQLSRV_FETCH_ASSOC);
-            
-            $_SESSION['usuario_id'] = $row['UsuarioID'];
-            $_SESSION['usuario_nombre'] = $row['Nombre'];
-            $_SESSION['usuario_email'] = $row['Email']; 
-            $_SESSION['es_admin'] = $row['EsAdmin'];
 
-            
-            sqlsrv_free_stmt($stmt);
-            sqlsrv_close($conn);
-            
-            if($row['EsAdmin'] == 1 || $row['EsAdmin']  == true)
-                {
-                    header('Location: admin.php');
-                }
-                else {
-                    header('Location: Insertar.php');
-                }
-            exit();
-        } else {
-            $error = "Usuario o contraseña incorrectos";
-        }
+
+    if ($row = sqlsrv_fetch_array($stmt, SQLSRV_FETCH_ASSOC)) {
         
-        if($stmt){
-             sqlsrv_free_stmt($stmt);
-        }
-        sqlsrv_close($conn);
-    }
 
+        $hashGuardado = $row['USU_CLAVE']; 
+        
+
+        if (password_verify($pass, $hashGuardado)) {
+            
+
+            $_SESSION['UsuarioID'] = $row['USU_ID'];
+            $_SESSION['Nombre'] = $row['USU_NOMBRE'];
+            $_SESSION['Rol'] = $row['USU_ROL_ID'];
+
+
+            header("Location: Alma.html"); 
+            exit();
+
+        } else {
+
+            echo "<script>
+                    alert('Contraseña incorrecta');
+                    window.location.href = 'login.html';
+                </script>";
+        }
+
+    } else {
+
+        echo "<script>
+                alert('El usuario no existe');
+                window.location.href = 'login.html';
+            </script>";
+    }
+    
+    sqlsrv_close($conn);
+}
 ?>
 
 
