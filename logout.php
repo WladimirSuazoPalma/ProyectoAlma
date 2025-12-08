@@ -3,6 +3,6 @@ session_start();
 $_SESSION = array();
 session_destroy();
 
-header("Location: Alma.html");
+header("Location: Alma.php");
 exit(); 
 ?>

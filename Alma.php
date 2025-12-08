@@ -15,17 +15,34 @@ session_start();
                 <img src="img/logo1.jpg" alt="logo de la compañia">
                 <h2 class="nombre-empresa">Alma DermoEstetica</h2>
             </div>
-            <nav>
+            <nav >
                     <a href="Alma.html">Inicio </a> 
                     <a href="contacto.html">Contacto </a> 
                     <a href="consultar.php">Consultas </a>
                     <a href="quienes-somos.html">Quiénes Somos</a>
-                    <?php if (isset($_SESSION['UsuarioID'])){?>
-                        <a href="logout.php"style="color: #d4af37; border: 1px solid #d4af37; border-radius: 15px; padding: 5px 10px;">
-                            Cerrar Sesión
-                        </a>
+
+
+                    <?php if (isset($_SESSION['UsuarioID'])) { 
+        
                         
-                        <?php } else { ?>
+                        $rolTexto = "Usuario";
+                        switch($_SESSION['Rol']) {
+                            case 1: $rolTexto = "Administrador"; break;
+                            case 2: $rolTexto = "Esteticista"; break;
+                            case 3: $rolTexto = "Dermatólogo"; break;
+                            case 4: $rolTexto = "Paciente"; break;
+                        }
+                    ?>
+                        <div class="perfil-usuario">
+                            <div class="detalles">
+                                <span class="nombre"><?php echo $_SESSION['Nombre'] . " " . $_SESSION['Apellido']; ?></span>
+                                <span class="rol"><?php echo $rolTexto; ?></span>
+                            </div>
+                            
+                            <a href="logout.php" class="btn-salir">Cerrar Sesión</a>
+                        </div>
+
+                    <?php } else { ?>
                             <a href="login.html">Login</a>
                             <a href="registrar.html">Registrar</a>
                         <?php } ?>
