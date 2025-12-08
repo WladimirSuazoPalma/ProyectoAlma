@@ -2,7 +2,7 @@
 session_start();
 require_once("conexionsql.php");
 if (!isset($_SESSION['UsuarioID'])){
-    header("Location: login.php");
+    header("Location: login.html");
     exit();
 }
 

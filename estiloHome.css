@@ -381,7 +381,6 @@ nav a:hover {
 
 
 
-
 body.fondo-login {
     justify-content: center; 
     align-items: center; 
@@ -574,11 +573,30 @@ body.fondo-dashboard {
 
 
 
+
+
+
+
 .contenido-pagina{
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    flex-wrap: wrap;
+
     background-color: #32a0c2;
-    text-align: center;
-    padding: 10px 0;
-    font-size: 13px;
-    color: #050202;
+    padding: 60px 20px;
+    align-items: flex-start;
     
+}
+.login-card-2 {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    border: 1px solid #d4af37;
+
+    margin-bottom: 20px;
 }

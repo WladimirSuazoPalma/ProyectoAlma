@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,10 +18,18 @@
             <nav>
                     <a href="Alma.html">Inicio </a> 
                     <a href="contacto.html">Contacto </a> 
-                    <a href="login.html">Login</a>
-                    <a href="registrar.html">Registrar </a>
                     <a href="consultar.php">Consultas </a>
                     <a href="quienes-somos.html">Quiénes Somos</a>
+                    <?php if (isset($_SESSION['UsuarioID'])){?>
+                        <a href="logout.php"style="color: #d4af37; border: 1px solid #d4af37; border-radius: 15px; padding: 5px 10px;">
+                            Cerrar Sesión
+                        </a>
+                        
+                        <?php } else { ?>
+                            <a href="login.html">Login</a>
+                            <a href="registrar.html">Registrar</a>
+                        <?php } ?>
+                    
             </nav> 
         </header>
     <section class="servicios-destacados">
