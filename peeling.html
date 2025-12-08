@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peeling Químico - Alma DermoEstética</title>
+    <link rel="stylesheet" href="estilo.css">
+    <style>
+        body {
+            color: #000000 !important;
+        }
+        
+        h1, h2, h3, h4, h5, h6, p, li, span {
+            color: #000000 !important;
+        }
+    </style>
+</head>
+<body> <center>
+    <header>
+        <h1>Peeling Químico</h1>
+        <p>Tratamiento avanzado para manchas y arrugas finas. Rejuvenece tu rostro</p>
+    </header>
+
+    <main>
+        <div class="detalle-servicio">
+            
+            <div class="galeria-fotos">
+                <div class="foto-principal">
+                    <img src="peeling-1.jpg" alt="" id="fotoPrincipal">
+                </div>
+                <div class="fotos-miniatura">
+                    <img src="img/peeling1.png" alt="Foto 1" onclick="cambiarFoto(this.src)">
+                    <img src="img/peeling2.png" alt="Foto 2" onclick="cambiarFoto(this.src)">                    
+                </div>
+            </div>
+
+            <div class="info-servicio">
+                <h2>¿Qué es el Peeling Químico?</h2>
+                <p>El peeling químico es un tratamiento dermatológico no invasivo que utiliza soluciones químicas para exfoliar las capas superficiales de la piel. Estimula la renovación celular y la producción de colágeno, resultando en una piel más lisa, luminosa y rejuvenecida. Es ideal para tratar manchas, cicatrices, arrugas finas y mejorar la textura general de la piel.</p>
+
+                <h3>Beneficios del Tratamiento</h3>
+                <ul class="lista-beneficios">
+                    <li>✓ Elimina manchas oscuras y decoloraciones</li>
+                    <li>✓ Reduce arrugas finas y líneas de expresión</li>
+                    <li>✓ Mejora la textura de la piel</li>
+                    <li>✓ Estimula la producción de colágeno</li>
+                    <li>✓ Aclara el tono de piel</li>
+                    <li>✓ Reduce cicatrices de acné</li>
+                    <li>✓ Minimiza poros dilatados</li>
+                    <li>✓ Aumenta la luminosidad natural</li>
+                    <li>✓ Mejora la absorción de otros productos</li>
+                    <li>✓ Resultados visibles en pocas sesiones</li>
+                </ul>
+
+                <h3>¿Cómo funciona?</h3>
+                <div class="pasos-tratamiento">
+                    <div class="paso">
+                        <span class="numero"></span>
+                        <h4>Evaluación de la Piel</h4>
+                        <p>Analizamos el tipo de piel y determinamos la concentración y tipo de ácido más adecuado.</p>
+                    </div>
+                    <div class="paso">
+                        <span class="numero"></span>
+                        <h4>Limpieza Profunda</h4>
+                        <p>Limpiamos la piel para eliminar impurezas y prepararla para el tratamiento.</p>
+                    </div>
+                    <div class="paso">
+                        <span class="numero"></span>
+                        <h4>Aplicación del Ácido</h4>
+                        <p>Aplicamos la solución química de forma uniforme sobre el rostro o área a tratar.</p>
+                    </div>
+                    <div class="paso">
+                        <span class="numero"></span>
+                        <h4>Tiempo de Exposición</h4>
+                        <p>Dejamos actuar el ácido durante el tiempo necesario para lograr la exfoliación deseada.</p>
+                    </div>
+                    <div class="paso">
+                        <span class="numero"></span>
+                        <h4>Neutralización y Cuidado</h4>
+                        <p>Neutralizamos el ácido y aplicamos productos calmantes e hidratantes para proteger la piel.</p>
+                    </div>
+                </div>
+
+                <h3>Tipos de Peeling Químico</h3>
+                <div class="imperfecciones-lista">
+                    <div class="imperfeccion-item">
+                        <strong>Peeling Superficial:</strong> Ácidos suaves (AHA, BHA) para exfoliación ligera y rejuvenecimiento
+                    </div>
+                    <div class="imperfeccion-item">
+                        <strong>Peeling Medio:</strong> Ácido glicólico o salicílico para resultados más profundos
+                    </div>
+                    <div class="imperfeccion-item">
+                        <strong>Peeling Profundo:</strong> Fenol para transformación significativa (requiere recuperación más larga)
+                    </div>
+                    <div class="imperfeccion-item">
+                        <strong>Peeling Personalizado:</strong> Combinación de ácidos según necesidades específicas de tu piel
+                    </div>
+                </div>
+
+                <h3>Detalles del Servicio</h3>
+                <div class="detalles-box">
+                    <div class="detalle-item">
+                        <strong> Duración:</strong> 30-45 minutos
+                    </div>
+                    <div class="detalle-item">
+                        <strong> Precio:</strong> Desde $80.000
+                    </div>
+                    <div class="detalle-item">
+                        <strong> Frecuencia:</strong> 1 sesión cada 2-4 semanas
+                    </div>
+                    <div class="detalle-item">
+                        <strong> Producto:</strong> Ácidos químicos profesionales (AHA, BHA, TCA)
+                    </div>
+                    <div class="detalle-item">
+                        <strong> Molestia:</strong> Leve (sensación de ardor controlable)
+                    </div>
+                    <div class="detalle-item">
+                        <strong> Recuperación:</strong> 3-7 días según intensidad del peeling
+                    </div>
+                </div>
+
+                <h3>Recomendaciones</h3>
+                <div class="recomendaciones">
+                    <p><strong>Antes del procedimiento:</strong></p>
+                    <ul>
+                        <li>Suspender retinoides 3-5 días antes</li>
+                        <li>Evitar exposición solar excesiva</li>
+                        <li>No usar productos irritantes</li>
+                        <li>Hidratar bien la piel días previos</li>
+                        <li>Informar sobre sensibilidades o alergias</li>
+                    </ul>
+                    <p><strong>Después del procedimiento:</strong></p>
+                    <ul>
+                        <li>Usar protector solar SPF 50+ diariamente</li>
+                        <li>Evitar maquillaje por 24-48 horas</li>
+                        <li>No exfoliar ni frotar la piel</li>
+                        <li>Mantener la piel hidratada</li>
+                        <li>Evitar ejercicio intenso por 48 horas</li>
+                        <li>No nadar ni usar piscinas por 48 horas</li>
+                        <li>Evitar productos con ácidos por 1 semana</li>
+                        <li>Usar cremas calmantes recomendadas</li>
+                    </ul>
+                </div>
+
+                <h3>Preguntas Frecuentes</h3>
+                <div class="faqs">
+                    <div class="faq-item">
+                        <h4>¿Es doloroso?</h4>
+                        <p>Puedes sentir una sensación de ardor o picazón durante la aplicación, pero es controlable y temporal. Se aplican productos calmantes para minimizar la molestia.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>¿Cuándo veré resultados?</h4>
+                        <p>Los resultados comienzan a notarse después de 3-5 días cuando la piel se regenera. Los mejores resultados se ven después de 2-3 sesiones.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>¿Cuánto dura la descamación?</h4>
+                        <p>La descamación típicamente dura 3-7 días dependiendo de la profundidad del peeling. Es un proceso natural de renovación celular.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>¿Puedo usar maquillaje después?</h4>
+                        <p>Se recomienda esperar 24-48 horas antes de usar maquillaje. Cuando lo hagas, usa productos suaves y no irritantes.</p>
+                    </div>
+                </div>
+
+                <div class="botones-accion">
+                    <a href="Alma.html" class="btn-volver">← Volver al Inicio</a>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Alma DermoEstética - Todos los derechos reservados</p>
+    </footer>
+
+    <script>
+        function cambiarFoto(src) {
+            document.getElementById('fotoPrincipal').src = src;
+        }
+    </script>
+    </center>
+</body>
+</html>
