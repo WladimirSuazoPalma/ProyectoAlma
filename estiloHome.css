@@ -9,18 +9,6 @@ body {
     display: flex;
     flex-direction: column;
 
-
-
-
-
-
-
-
-
-
-
-
-
     background-image: 
         linear-gradient(rgba(94, 28, 38, 0.05), rgba(94, 28, 38, 0.05)),
         url('img/Rocas2.png'); 
@@ -152,7 +140,7 @@ nav a:hover {
 }
 
 .imagen-tarjeta {
-    height: 200px;
+    height: 450px;
     background-size: cover;
     background-position: center;
 }
@@ -210,8 +198,8 @@ nav a:hover {
 
 
 .slider-frame {
-    width: 500px;
-    height: 200px;
+    width: 1000px;
+    height: 540px;
     margin: 50px auto 0;
     overflow: hidden;
 }
@@ -220,6 +208,7 @@ nav a:hover {
     display: flex;
     padding: 0;
     width: 400%;
+    height: 500px;
     animation: slide 8s infinite alternate ease-in-out;
 }
 
@@ -230,7 +219,7 @@ nav a:hover {
 
 .slider-frame img {
     width: 100%;
-    height: 200px;
+    height: 500px;
     border-radius: 15px;
 }
 
@@ -364,7 +353,15 @@ nav a:hover {
 .icono-pequeno:hover {
     transform: scale(1.1);
 }
+.logo-mail{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+    border: 0;
+    border-radius: 10px;
 
+}
 
 
 
