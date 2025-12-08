@@ -2,14 +2,24 @@ body{
     font-family: 'Segoe UI', sans-serif;
     margin:0;
     
+<<<<<<< HEAD
     min-height: 100vh;      /* Obliga al cuerpo a medir al menos el 100% de la pantalla */
     display: flex;          /* Convierte el cuerpo en una caja flexible */
     flex-direction: column; /* Ordena los elementos (header, main, footer) verticalmente */
+=======
+    min-height: 100vh;      
+    display: flex;          
+    flex-direction: column;
+>>>>>>> dcdb3c4ea265ae947055accff6a5082b54d3af8f
 
 
     background-image: 
         linear-gradient(rgba(94, 28, 38, 0.05), rgba(94, 28, 38, 0.05)),
+<<<<<<< HEAD
         url('img/logo2.png'); 
+=======
+        url('img/Rocas2.png'); 
+>>>>>>> dcdb3c4ea265ae947055accff6a5082b54d3af8f
         
     background-repeat: no-repeat;
     background-position: center center;
@@ -21,7 +31,10 @@ a{
     color:black;
 
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> dcdb3c4ea265ae947055accff6a5082b54d3af8f
 header{
     display: flex;
     min-height: 70px;
@@ -62,12 +75,16 @@ reg{
 
 
 
+<<<<<<< HEAD
 .fotos-miniatura {
     display: flex;
     flex-wrap: wrap; 
     justify-content: center; 
     gap: 10px; 
 }
+=======
+
+>>>>>>> dcdb3c4ea265ae947055accff6a5082b54d3af8f
 
 .servicios-destacados {
     padding: 60px 0;
@@ -276,6 +293,7 @@ reg{
     border-top: 1px solid rgba(255,255,255,0.1);
 }
 .barra-copyright p {
+<<<<<<< HEAD
     margin: 0; /* Elimina el margen por defecto del párrafo */
 }
 
@@ -290,3 +308,179 @@ reg{
     margin-bottom: 10px; 
     color: rgb(0, 0, 0); 
 }
+=======
+    margin: 0; 
+}
+
+.contenedor-dashboard {
+    width: 95%;
+    max-width: 1200px;
+    margin: 40px auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+}
+body.fondo-dashboard {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f4f4f4; 
+    background-image: none;    
+    margin: 0;                 
+    padding: 0;
+    display: block;            
+}
+
+.tabla-citas {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    font-size: 15px;
+}
+
+.tabla-citas thead tr {
+    background-color: #5e1c26; 
+    color: white;
+    text-align: left;
+}
+
+.tabla-citas th, .tabla-citas td {
+    padding: 15px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+
+.tabla-citas tbody tr:hover {
+    background-color: #f9e6e8;
+}
+
+
+.contenedor-imagen2 {
+position: relative;
+width: 100%;       
+height: 700px;      
+
+background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                url('img/bitiligo2.jpg'); 
+
+background-size: cover;    
+background-position: center; 
+
+
+display: flex;
+justify-content: center;
+align-items: center;
+margin-bottom: 40px; 
+}
+
+.texto-superpuesto h2 {
+color: white;
+font-family: 'Georgia', serif;
+font-size: 3em;     
+margin: 0;          
+text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+text-transform: uppercase; 
+letter-spacing: 2px; 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.contenedor-imagen2 {
+    position: relative;
+    width: 100%;
+    
+    min-height: 80vh; 
+    
+    background-image: 
+        linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+        url('img/bitiligo2.jpg'); 
+    
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; 
+    
+    
+    display: flex;
+    flex-direction: column; 
+    align-items: center;    
+    justify-content: center; 
+    
+    padding: 60px 0;
+}
+
+
+.texto-superpuesto {
+    margin-bottom: 50px; 
+    text-align: center;
+}
+
+.texto-superpuesto h2 {
+    color: white;
+    font-family: 'Georgia', serif;
+    font-size: 3.5em; 
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.8);
+    margin: 0;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    border-bottom: 2px solid #d4af37; 
+    padding-bottom: 15px;
+}
+
+
+.seccion-contacto-dividida {
+    width: 90%;
+    max-width: 1100px;
+    
+    display: flex;       
+    gap: 40px;           
+    align-items: stretch; 
+}
+
+.columna-contacto {
+    flex: 1; 
+    
+
+    background-color: rgba(255, 255, 255, 0.92); 
+    
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3); 
+
+
+.columna-contacto h3 {
+    color: #5e1c26;
+    font-size: 1.8em;
+    margin-top: 0;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+    .contenedor-imagen2 {
+        padding: 40px 0;
+    }
+    
+    .texto-superpuesto h2 {
+        font-size: 2.5em; 
+    }
+
+    .seccion-contacto-dividida {
+        flex-direction: column; 
+        width: 95%;
+    }
+                        }
+}
+>>>>>>> dcdb3c4ea265ae947055accff6a5082b54d3af8f

@@ -6,7 +6,11 @@ body {
     flex-direction: column; 
     background-image: 
         linear-gradient(rgba(94, 28, 38, 0.05), rgba(94, 28, 38, 0.05)),
+<<<<<<< HEAD
         url('img/logo.png'); 
+=======
+        url('img/logo.jpg'); 
+>>>>>>> dcdb3c4ea265ae947055accff6a5082b54d3af8f
         
     background-repeat: no-repeat;
     background-position: center center;
@@ -39,7 +43,11 @@ a {
 }
 
 p {
+<<<<<<< HEAD
     color: #dcd6d6;
+=======
+    color: #030303;
+>>>>>>> dcdb3c4ea265ae947055accff6a5082b54d3af8f
 }
 
 li {
@@ -102,13 +110,23 @@ header h2 {
     font-size: 1.8em; 
     margin-top: 0;
     font-weight: normal;
+<<<<<<< HEAD
     color: #000000; 
+=======
+    color: #d0d0d0; 
+>>>>>>> dcdb3c4ea265ae947055accff6a5082b54d3af8f
 }
 
 main {
     padding: 20px;
     background-color: rgba(44, 35, 77, 0.4);
+<<<<<<< HEAD
 }footer {
+=======
+}
+
+footer {
+>>>>>>> dcdb3c4ea265ae947055accff6a5082b54d3af8f
     text-align: center;
     padding: 25px 10px;
     margin-top: 30px;
@@ -311,6 +329,7 @@ body.fondo-dashboard {
 .btn-volver:hover {
     background-color: #5e1c26;
     color: white;
+<<<<<<< HEAD
 }
 
 
@@ -324,3 +343,6 @@ body.fondo-dashboard {
     color: #000000 !important;
 }
 
+=======
+}
+>>>>>>> dcdb3c4ea265ae947055accff6a5082b54d3af8f

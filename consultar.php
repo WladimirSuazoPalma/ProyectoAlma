@@ -31,7 +31,11 @@ if($conn)
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agenda Activa | Alma Dermoestética</title>
+<<<<<<< HEAD
     <link href="estilo.css" rel="stylesheet"/>
+=======
+    <link href="estiloHome.css" rel="stylesheet"/>
+>>>>>>> dcdb3c4ea265ae947055accff6a5082b54d3af8f
 </head>
 <body class="contenedor-dashboard">
     <div class="fondo-dashboard">
@@ -89,4 +93,8 @@ if($conn)
         </div>
     </div>
 </body>
+<<<<<<< HEAD
 </html>
+=======
+</html>
+>>>>>>> dcdb3c4ea265ae947055accff6a5082b54d3af8f

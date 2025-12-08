@@ -73,4 +73,8 @@ if (isset($_POST["Ingresar"]))
 
 
     
+<<<<<<< HEAD
 ?>
+=======
+?>
+>>>>>>> dcdb3c4ea265ae947055accff6a5082b54d3af8f

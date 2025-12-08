@@ -56,6 +56,7 @@ if (isset($_POST['Usuario']) && isset($_POST['Clave'])) {
     
     sqlsrv_close($conn);
 }
+<<<<<<< HEAD
 ?>
 
 
@@ -117,3 +118,6 @@ if (isset($_POST['Usuario']) && isset($_POST['Clave'])) {
 
     </body>
 </html>
+=======
+?>
+>>>>>>> dcdb3c4ea265ae947055accff6a5082b54d3af8f
