@@ -558,7 +558,7 @@ body.fondo-dashboard {
     margin: 0;
 }
 
-/* RESPONSIVE GENERAL */
+
 @media (max-width: 768px) {
     .seccion-contacto-dividida {
         flex-direction: column;
@@ -570,4 +570,15 @@ body.fondo-dashboard {
     .texto-superpuesto h2 {
         font-size: 2.2em;
     }
+}
+
+
+
+.contenido-pagina{
+    background-color: #32a0c2;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 13px;
+    color: #050202;
+    
 }

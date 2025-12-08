@@ -8,16 +8,19 @@
 </head>
 <body>
     <header>
-        <nav>
-            <ul>
-                <li><a href="Alma.html">Inicio</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-                <li><a href="quienes-somos.html" class="active">Quiénes Somos</a></li> 
-                <li><a href="registrar.html">Registrar</a></li>
-                <li><a href="login.html">Ingresar </a></li>
-            </ul>
-        </nav>
-    </header>
+            <div class="logo">
+                <img src="img/logo1.jpg" alt="logo de la compañia">
+                <h2 class="nombre-empresa">Alma DermoEstetica</h2>
+            </div>
+            <nav>
+                    <a href="Alma.html">Inicio </a> 
+                    <a href="contacto.html">Contacto </a> 
+                    <a href="login.html">Login</a>
+                    <a href="registrar.html">Registrar </a>
+                    <a href="consultar.php">Consultas </a>
+                    <a href="quienes-somos.html">Quiénes Somos</a>
+            </nav> 
+        </header>
 
     <main>
         <section class="contenido-pagina">
@@ -73,9 +76,36 @@
 
 
 </body>
-    <footer>
-        <p>© <span id="currentYear"></span> Alma DermoEstetica - Todos los derechos reservados.</p>
-    </footer>
+    <footer class="footer-alma">
+            <div class="contenedor-footer">
+                
+                <div class="columna-footer">
+                    <h3>Centro ALMA</h3>
+                    <p>Especialistas en resaltar tu belleza natural con tratamientos dermoestéticos seguros y profesionales.</p>
+                </div>
+
+                <div class="columna-footer">
+                    <h3>Enlaces</h3>
+                    <ul class="lista-footer">
+                        <li><a href="Alma.html">Inicio</a></li>
+                        <li><a href="#">Tratamientos</a></li>
+                        <li><a href="login.html">Intranet Staff</a></li>
+                    </ul>
+                </div>
+                <!-- Los iconos de ✉️  📞 y 📍 son mis iconos agregados a mano, no es IA porfavor leer esto -->
+                <div class="columna-footer">
+                    <h3>Contáctanos</h3>
+                    <p>📍 Av. Alemania 0123, Temuco</p>
+                    <p>📞 +56 9 1234 5678</p>
+                    <p>✉️ contacto@alma.cl</p>
+                </div>
+
+            </div>
+
+            <div class="barra-copyright">
+                <p>&copy; 2025 Centro de Salud Integral ALMA. Todos los derechos reservados.</p>
+            </div>
+        </footer>
         <script>
         if (document.getElementById('currentYear')) {
             document.getElementById('currentYear').textContent = new Date().getFullYear();

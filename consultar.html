@@ -78,13 +78,14 @@
     </div>
     
     <script>
-        // Funcionalidad para cancelar citas
+
         document.querySelectorAll('.boton-cancelar').forEach(boton => {
             boton.addEventListener('click', function() {
                 const citaID = this.getAttribute('data-cita-id');
                 
                 if (confirm('¿Estás seguro de que deseas cancelar esta cita?')) {
-                    // Llamada AJAX para cancelar
+
+                    
                     fetch('cancelar_cita.php', {
                         method: 'POST',
                         headers: {
