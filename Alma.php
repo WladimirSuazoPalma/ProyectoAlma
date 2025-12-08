@@ -15,9 +15,9 @@ session_start();
                 <img src="img/logo1.jpg" alt="logo de la compañia">
                 <h2 class="nombre-empresa">Alma DermoEstetica</h2>
             </div>
-            <nav >
+            <nav class="nav-principal">
                     <a href="Alma.html">Inicio </a> 
-                    <a href="contacto.html">Contacto </a> 
+                    <a href="contacto.php">Contacto </a> 
                     <a href="consultar.php">Consultas </a>
                     <a href="quienes-somos.html">Quiénes Somos</a>
 

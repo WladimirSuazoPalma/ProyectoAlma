@@ -85,7 +85,7 @@ if($conn)
             }
             ?>
             <div style="text-align: center;">
-            <a href="Alma.html" class="btn-volver">← Volver al Menú Principal</a>
+            <a href="Alma.php" class="btn-volver">← Volver al Menú Principal</a>
         </div>
     </div>
 </body>
