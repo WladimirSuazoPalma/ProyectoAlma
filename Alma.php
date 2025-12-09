@@ -40,6 +40,7 @@ session_start();
                             <div>
                                 <a href="registrar.html">Registrar</a>
                                 <a href="generarcita.php">Agendar Cita</a>
+                                <a href="solicitudes.php">Aceptar Citas</a>
                             </div>
                             <?php
                         }
@@ -47,6 +48,13 @@ session_start();
                             ?>
                             <div>
                                 <a href="generarcita.php">Agendar Cita</a>
+                            </div>
+                            <?php
+                        }
+                        if ($_SESSION['Rol'] == '4'){
+                            ?>
+                            <div>
+                                <a href="solicitar_cita.php">Agendar Cita</a>
                             </div>
                             <?php
                         }

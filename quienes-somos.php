@@ -49,7 +49,7 @@ session_start();
                             <?php
                         }
                         ?>
-                    
+                     
                         <div class="perfil-usuario">
                             <div class="detalles">
                                 <span class="nombre"><?php echo $_SESSION['Nombre'] . " " . $_SESSION['Apellido']; ?></span>
@@ -115,7 +115,7 @@ session_start();
                     que cada tratamiento sea efectivo y placentero.
                 </p>
             </div> -->
-
+ 
             <p>
                 Te invitamos a conocernos y a descubrir cómo podemos ayudarte a alcanzar
                 tus objetivos de belleza y bienestar. ¡En Alma DermoEstetica, tu salud y
@@ -125,7 +125,7 @@ session_start();
         </section>
     </main>
 
-
+ 
 
 
 </body>
@@ -152,7 +152,7 @@ session_start();
                     <p>📞 +56 9 1234 5678</p>
                     <p>✉️ contacto@alma.cl</p>
                 </div>
-
+                         
             </div>
 
             <div class="barra-copyright">

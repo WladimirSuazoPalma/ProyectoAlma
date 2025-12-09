@@ -53,7 +53,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 }
 
 $listaClientes = [];
-$sqlCli = "SELECT CLI_ID, CLI_NOMBRE, CLI_APELLIDO FROM CLI_CLIENTE ORDER BY CLI_NOMBRE";
+$sqlCli = "SELECT USU_ID as CLI_ID, USU_NOMBRE as CLI_NOMBRE, USU_APELLIDO as CLI_APELLIDO 
+           FROM USU_USUARIO 
+           WHERE USU_ROL_ID = 4 
+           ORDER BY USU_NOMBRE";
 $stmtCli =sqlsrv_query($conn, $sqlCli);
 if($stmtCli){
     while($row =sqlsrv_fetch_array($stmtCli,SQLSRV_FETCH_ASSOC)){
