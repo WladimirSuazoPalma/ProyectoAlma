@@ -17,7 +17,7 @@ session_start();
             </div>
             <nav class="nav-principal">
                     <a href="Alma.php">Inicio </a> 
-                    <a href="generarcita.php">Agendar Cita</a>
+                    
                      
                     <a href="consultar.php">Consultas </a>
                     <a href="contacto.php">Contacto </a>
@@ -31,6 +31,22 @@ session_start();
                             case 3: $rolTexto = "Dermatólogo"; break;
                             case 4: $rolTexto = "Paciente"; break;
                         }
+                        if ($_SESSION['Rol'] == '1'){
+                            ?>
+                            <div>
+                                <a href="registrar.html">Registrar</a>
+                                <a href="generarcita.php">Agendar Cita</a>
+                            </div>
+                            <?php
+                        }
+                        if ($_SESSION['Rol'] == '2' || $_SESSION['Rol'] == '3'){
+                            ?>
+                            <div>
+                                <a href="generarcita.php">Agendar Cita</a>
+                            </div>
+                            <?php
+                        }
+                    
                     ?>
                         <div class="perfil-usuario">
                             <div class="detalles">

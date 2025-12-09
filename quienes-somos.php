@@ -18,15 +18,13 @@ session_start();
             </div>
             <nav class="nav-principal">
                     <a href="Alma.php">Inicio </a> 
-                    <a href="generarcita.php">Agendar Cita</a>
                     
+                     
                     <a href="consultar.php">Consultas </a>
-                    <a href="contacto.php">Contacto </a> 
-                    <a href="quienes-somos.html">Quiénes Somos</a>
+                    <a href="contacto.php">Contacto </a>
+                    <a href="quienes-somos.php">Quiénes Somos</a>
 
                     <?php if (isset($_SESSION['UsuarioID'])) { 
-        
-                        
                         $rolTexto = "Usuario";
                         switch($_SESSION['Rol']) {
                             case 1: $rolTexto = "Administrador"; break;
@@ -34,7 +32,24 @@ session_start();
                             case 3: $rolTexto = "Dermatólogo"; break;
                             case 4: $rolTexto = "Paciente"; break;
                         }
-                    ?>
+                        if ($_SESSION['Rol'] == '1'){
+                            ?>
+                            <div>
+                                <a href="registrar.html">Registrar</a>
+                                <a href="generarcita.php">Agendar Cita</a>
+                            </div>
+                            <?php
+                        }
+                        if ($_SESSION['Rol'] == '2' || $_SESSION['Rol'] == '3'){
+                            ?>
+                            <div>
+                                <a href="generarcita.php">Agendar Cita</a>
+                            </div>
+                            
+                            <?php
+                        }
+                        ?>
+                    
                         <div class="perfil-usuario">
                             <div class="detalles">
                                 <span class="nombre"><?php echo $_SESSION['Nombre'] . " " . $_SESSION['Apellido']; ?></span>
