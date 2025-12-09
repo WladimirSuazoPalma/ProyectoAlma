@@ -2,7 +2,7 @@
 session_start();
 require_once("conexionsql.php");
 if (!isset($_SESSION['UsuarioID'])){
-    header("Location: login.php");
+    header("Location: login.html");
     exit();
 }
 
@@ -31,9 +31,7 @@ if($conn)
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agenda Activa | Alma Dermoestética</title>
-
     <link href="estiloHome.css" rel="stylesheet"/>
-    
 </head>
 <body class="contenedor-dashboard">
     <div class="fondo-dashboard">
@@ -87,10 +85,8 @@ if($conn)
             }
             ?>
             <div style="text-align: center;">
-            <a href="Alma.html" class="btn-volver">← Volver al Menú Principal</a>
+            <a href="Alma.php" class="btn-volver">← Volver al Menú Principal</a>
         </div>
     </div>
 </body>
-
 </html>
-

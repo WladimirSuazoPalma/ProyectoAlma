@@ -1,15 +1,19 @@
 body {
-    font-family: 'Segoe UI', sans-serif;
+    font-family: 'Arial', sans-serif;
     margin:0;
     min-height: 100vh;      
     display: flex;       
     flex-direction: column; 
     background-image: 
         linear-gradient(rgba(94, 28, 38, 0.05), rgba(94, 28, 38, 0.05)),
+<<<<<<< HEAD
         
         url('img/logo.jpg'); 
 
         
+=======
+        url('img/Rocas2.png'); 
+>>>>>>> 71ed62a29ad905514e61f5693a92a7cae17252e4
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -41,9 +45,13 @@ a {
 }
 
 p {
+<<<<<<< HEAD
     
     color: #030303;
 
+=======
+    color: #030303;
+>>>>>>> 71ed62a29ad905514e61f5693a92a7cae17252e4
 }
 
 li {
@@ -72,18 +80,18 @@ li{
     
 }
 /* li:hover{
-    background-color: rgb(19, 21, 21);
-   
+background-color: rgb(19, 21, 21);
+
 } */
-    /* .menu-navegacion ul {
-      display: flex;
-      list-style-type: none;
-      padding-left: 0;
-      margin: 0;
-    }
-    .menu-navegacion ul li {
-      margin-right: 20px;
-    } */
+/* .menu-navegacion ul {
+    display: flex;
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+}
+.menu-navegacion ul li {
+    margin-right: 20px;
+} */
 
 header {
     text-align:center;
@@ -107,19 +115,29 @@ header h2 {
     font-size: 1.8em; 
     margin-top: 0;
     font-weight: normal;
+<<<<<<< HEAD
     
     color: #d0d0d0; 
 
+=======
+    color: #d0d0d0; 
+>>>>>>> 71ed62a29ad905514e61f5693a92a7cae17252e4
 }
 
 main {
     padding: 20px;
     background-color: rgba(44, 35, 77, 0.4);
+<<<<<<< HEAD
 
 }
 
 footer {
 
+=======
+}
+
+footer {
+>>>>>>> 71ed62a29ad905514e61f5693a92a7cae17252e4
     text-align: center;
     padding: 25px 10px;
     margin-top: 30px;
@@ -323,3 +341,18 @@ body.fondo-dashboard {
     background-color: #5e1c26;
     color: white;
 }
+<<<<<<< HEAD
+=======
+
+
+.pagina-limpieza * {
+    color: #000000 !important;
+}
+
+.pagina-limpieza h1,
+.pagina-limpieza h2,
+.pagina-limpieza h3 {
+    color: #000000 !important;
+}
+
+>>>>>>> 71ed62a29ad905514e61f5693a92a7cae17252e4

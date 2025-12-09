@@ -32,10 +32,11 @@ if (isset($_POST['Usuario']) && isset($_POST['Clave'])) {
 
             $_SESSION['UsuarioID'] = $row['USU_ID'];
             $_SESSION['Nombre'] = $row['USU_NOMBRE'];
+            $_SESSION['Apellido']  = $row['USU_APELLIDO'];
             $_SESSION['Rol'] = $row['USU_ROL_ID'];
 
 
-            header("Location: Alma.html"); 
+            header("Location: Alma.php"); 
             exit();
 
         } else {
@@ -56,8 +57,8 @@ if (isset($_POST['Usuario']) && isset($_POST['Clave'])) {
     
     sqlsrv_close($conn);
 }
-
 ?>
+
 
 
 

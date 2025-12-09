@@ -1,7 +1,6 @@
 <?php
 session_start();
 
-// Verificar que el usuario esté creado y sea administrador
 if (!isset($_SESSION['usuario_id']) || $_SESSION['es_admin'] != 1) {
     header("Location: login.php");
     exit();
