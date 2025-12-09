@@ -20,7 +20,7 @@ session_start();
 
                     
 
-                    <a href="consultar.php">Consultas </a>
+                    <a href="consultar.php">Citas </a>
                     <a href="contacto.php">Contacto </a> 
                     <a href="quienes-somos.php">Quiénes Somos</a>
 
@@ -39,8 +39,9 @@ session_start();
                             ?>
                             <div>
                                 <a href="registrar.html">Registrar</a>
-                                <a href="generarcita.php">Agendar Cita</a>
-                                <a href="solicitudes.php">Aceptar Citas</a>
+                                <a href="generarcita.php">Agendar</a>
+                                <a href="solicitudes.php">Aceptar</a>
+                                <a href="admin_usuarios.php">Administrar usuarios</a>
                             </div>
                             <?php
                         }

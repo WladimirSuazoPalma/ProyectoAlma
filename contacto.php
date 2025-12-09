@@ -19,7 +19,7 @@ session_start();
                     <a href="Alma.php">Inicio </a> 
                     
                      
-                    <a href="consultar.php">Consultas </a>
+                    <a href="consultar.php">Citas </a>
                     <a href="contacto.php">Contacto </a>
                     <a href="quienes-somos.php">Quiénes Somos</a>
 
