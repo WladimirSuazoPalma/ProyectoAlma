@@ -68,6 +68,11 @@ BEGIN
         SELECT 'ERROR' AS Resultado, 'Error interno al guardar la cita.' AS Mensaje;
     END CATCH
 END
+ 
+
+
+
+
 select * from SER_SERVICIO
 select * from CLI_CLIENTE
 select * from USU_USUARIO
@@ -85,6 +90,9 @@ EXEC AGENDARCITA
     @ProfesionalID = 3, 
     @ServicioID = 2, 
     @FechaInicio = '2025-12-20 09:00:00';
+
+
+
 EXEC AGENDARCITA
 	@ClienteID=2,
 	@ProfesionalID=2,

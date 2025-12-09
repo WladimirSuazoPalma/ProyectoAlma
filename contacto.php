@@ -18,8 +18,9 @@ session_start();
             <nav class="nav-principal">
                     <a href="Alma.php">Inicio </a> 
                     <a href="generarcita.php">Agendar Cita</a>
-                    <a href="contacto.php">Contacto </a> 
+                     
                     <a href="consultar.php">Consultas </a>
+                    <a href="contacto.php">Contacto </a>
                     <a href="quienes-somos.php">Quiénes Somos</a>
 
                     <?php if (isset($_SESSION['UsuarioID'])) { 

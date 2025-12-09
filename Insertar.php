@@ -27,7 +27,7 @@ function Insertar($conn)
         die(print_r(sqlsrv_errors(), true));
     }
     else{
-        //EL popup bonito
+
         echo '
         <!DOCTYPE html>
         <html lang="es">
