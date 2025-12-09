@@ -1,4 +1,4 @@
-<?php
+a<?php
 session_start();
 ?>
 <!DOCTYPE html>
@@ -17,9 +17,10 @@ session_start();
             </div>
             <nav class="nav-principal">
                     <a href="Alma.html">Inicio </a> 
-                    <a href="contacto.php">Contacto </a> 
+                    <a href="generarcita.php">Agendar cita</a>
                     <a href="consultar.php">Consultas </a>
-                    <a href="quienes-somos.html">Quiénes Somos</a>
+                    <a href="contacto.php">Contacto </a> 
+                    <a href="quienes-somos.php">Quiénes Somos</a>
 
 
                     <?php if (isset($_SESSION['UsuarioID'])) { 
